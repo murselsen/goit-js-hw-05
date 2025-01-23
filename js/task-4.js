@@ -1,5 +1,7 @@
 console.log('~~~~~~~~~ Task 4: ~~~~~~~~~');
 
+// Görev 4. Toplam bakiye
+
 //getTotalBalanceByGender;
 const getTotalBalanceByGender = (users, gender) => {
   const balance = users.reduce((total, user) => {
