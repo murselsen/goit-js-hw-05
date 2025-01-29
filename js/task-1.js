@@ -1,7 +1,7 @@
 console.log('~~~~~~~~~ Task 1: ~~~~~~~~~');
 
 //Görev 1: Kullanıcı adları
-
+ 
 const getUserNames = users => {
   return users.map(user => user.name);
 };

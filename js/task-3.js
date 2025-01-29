@@ -6,7 +6,7 @@ console.log('~~~~~~~~~ Task 3: ~~~~~~~~~');
 const sortByDescendingFriendCount = users => {
   return users.sort((a, b) => b.friends.length - a.friends.length);
 };
-
+ 
 console.log(
   sortByDescendingFriendCount([
     {

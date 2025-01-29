@@ -1,7 +1,7 @@
 console.log('~~~~~~~~~ Task 2: ~~~~~~~~~');
 
 //Görev 2. Arkadaşı olan kullanıcılar
-
+ 
 const getUsersWithFriend = (users, friendName) => {
   let friends = users.filter(user => user.friends.includes(friendName));
   return friends;
