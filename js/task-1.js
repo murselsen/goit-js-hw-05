@@ -1,47 +1,39 @@
 console.log('~~~~~~~~~ Task 1: ~~~~~~~~~');
 
-//Görev 1: Kullanıcı adları
+// Görev 1. Kullanıcı hesabı
 
-const getUserNames = users => {
-  return users.map(user => user.name);
+const customer = {
+  username: 'Mango',
+  balance: 24000,
+  discount: 0.1,
+  orders: ['Burger', 'Pizza', 'Salad'],
+  // Change code below this line
+  getBalance() {
+    // return balance;
+    return this.balance;
+  },
+  getDiscount() {
+    // return discount;
+    return this.discount;
+  },
+  setDiscount(value) {
+    // discount = value;
+    this.discount = value;
+  },
+  getOrders() {
+    // return orders;
+    return this.orders;
+  },
+  addOrder(cost, order) {
+    // balance -= cost - cost * discount;
+    // orders.push(order);
+    this.balance -= cost - cost * this.discount;
+    this.orders.push(order);
+  },
 };
 
-console.log(
-  getUserNames([
-    {
-      name: 'Moore Hensley',
-      email: 'moorehensley@indexia.com',
-      balance: 2811,
-    },
-    {
-      name: 'Sharlene Bush',
-      email: 'sharlenebush@tubesys.com',
-      balance: 3821,
-    },
-    {
-      name: 'Ross Vazquez',
-      email: 'rossvazquez@xinware.com',
-      balance: 3793,
-    },
-    {
-      name: 'Elma Head',
-      email: 'elmahead@omatom.com',
-      balance: 2278,
-    },
-    {
-      name: 'Carey Barr',
-      email: 'careybarr@nurali.com',
-      balance: 3951,
-    },
-    {
-      name: 'Blackburn Dotson',
-      email: 'blackburndotson@furnigeer.com',
-      balance: 1498,
-    },
-    {
-      name: 'Sheree Anthony',
-      email: 'shereeanthony@kog.com',
-      balance: 2764,
-    },
-  ]),
-);
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, 'Steak');
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
