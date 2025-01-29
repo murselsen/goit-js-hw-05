@@ -1,45 +1,36 @@
 console.log('~~~~~~~~~ Task 2: ~~~~~~~~~');
 
+<<<<<<< HEAD
 //Görev 2. Arkadaşı olan kullanıcılar
  
 const getUsersWithFriend = (users, friendName) => {
   let friends = users.filter(user => user.friends.includes(friendName));
   return friends;
 };
+=======
+// Görev 2. Depo
 
-const allUsers = [
-  {
-    name: 'Moore Hensley',
-    friends: ['Sharron Pace'],
-  },
-  {
-    name: 'Sharlene Bush',
-    friends: ['Briana Decker', 'Sharron Pace'],
-  },
-  {
-    name: 'Ross Vazquez',
-    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-  },
-  {
-    name: 'Elma Head',
-    friends: ['Goldie Gentry', 'Aisha Tran'],
-  },
-  {
-    name: 'Carey Barr',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
-  },
-  {
-    name: 'Blackburn Dotson',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
-  },
-  {
-    name: 'Sheree Anthony',
-    friends: ['Goldie Gentry', 'Briana Decker'],
-  },
-];
+class Storage {
+  #items;
+  constructor(items) {
+    this.#items = items;
+  }
+  getItems() {
+    return this.#items;
+  }
+  addItem(newItem) {
+    this.#items.push(newItem);
+  }
+  removeItem(itemToRemove) {
+    let newItemList = this.#items.filter(item => item !== itemToRemove);
+    this.#items = newItemList;
+  }
+}
+>>>>>>> 4dd9ec0f649a3a7bacfbf7153ae76566774d3350
 
-console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
-
-console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
-
-console.log(getUsersWithFriend(allUsers, 'Adrian Cross'));
+const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem('Droid');
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem('Prolonger');
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]

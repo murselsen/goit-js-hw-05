@@ -1,7 +1,19 @@
 console.log('~~~~~~~~~ Task 3: ~~~~~~~~~');
 
-// Görev 3. Arkadaş sayısına göre sırala
+class StringBuilder {
+  #value;
+  getValue() {
+    return this.#value;
+  }
+  padEnd(str) {
+    this.#value = this.#value + str;
+  }
+    padStart(str) {
+      
+  }
+}
 
+<<<<<<< HEAD
 //sortByDescendingFriendCount;
 const sortByDescendingFriendCount = users => {
   return users.sort((a, b) => b.friends.length - a.friends.length);
@@ -46,3 +58,13 @@ console.log(
     },
   ]),
 );
+=======
+const builder = new StringBuilder('.');
+console.log(builder.getValue()); // "."
+builder.padStart('^');
+console.log(builder.getValue()); // "^."
+builder.padEnd('^');
+console.log(builder.getValue()); // "^.^"
+builder.padBoth('=');
+console.log(builder.getValue()); // "=^.^="
+>>>>>>> 4dd9ec0f649a3a7bacfbf7153ae76566774d3350
